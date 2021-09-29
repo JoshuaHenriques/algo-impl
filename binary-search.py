@@ -1,14 +1,3 @@
-# Given a sorted array of n integers and a target value, determine if the target
-# exists in the array in logarithmic time using the binary search algorithm
-# (divide and conquer). If target exists in the array, print the index of it. 
-
-# Input:
-# nums[] = [1,4,5,7,8,9]
-# target = 7
-# Output: Element found at index 3
-
-# linear search, checking each index sequentially, is O(n)
-
 def binary_search_recursion(array, target, left, right):
 	if left > right:
 		return -1
