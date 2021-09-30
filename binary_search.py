@@ -20,8 +20,8 @@ def binary_search_iterative(array, target):
 		else:
 			left = mid + 1
 	return -1
-
-def main():
+	
+if __name__ == '__main__':
 	print(f'Binary Search Algorithm: ')
 	
 	nums0 = [2,5,6,8,9,10]
@@ -32,6 +32,3 @@ def main():
 	nums1 = [1,4,5,8,9]
 	target1 = 9
 	print(f'iterative: {binary_search_iterative(nums1, target1)}')
-	
-if __name__ == '__main__':
-    main()
