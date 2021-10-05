@@ -6,14 +6,14 @@ def merge(arr, l, m, r):
     L = [0] * (n1)
     R = [0] * (n2)
  
-    # Copy data to temp arrays L[] and R[]
+    # copy data to temp arrays L[] and R[]
     for i in range(0, n1):
         L[i] = arr[l + i]
  
     for j in range(0, n2):
         R[j] = arr[m + 1 + j]
  
-    # Merge the temp arrays back into arr[l..r]
+    # merge the temp arrays back into arr[l..r]
     i = 0     # Initial index of first subarray
     j = 0     # Initial index of second subarray
     k = l     # Initial index of merged subarray
@@ -27,15 +27,13 @@ def merge(arr, l, m, r):
             j += 1
         k += 1
  
-    # Copy the remaining elements of L[], if there
-    # are any
+    # copy the remaining elements of L[], if there are any
     while i < n1:
         arr[k] = L[i]
         i += 1
         k += 1
  
-    # Copy the remaining elements of R[], if there
-    # are any
+    # copy the remaining elements of R[], if there are any
     while j < n2:
         arr[k] = R[j]
         j += 1
@@ -48,11 +46,11 @@ def merge(arr, l, m, r):
 def merge_sort(arr, l, r):
     if l < r:
  
-        # Same as (l+r)//2, but avoids overflow for
+        # same as (l+r)//2, but avoids overflow for
         # large l and h
         m = l+(r-l)//2
  
-        # Sort first and second halves
+        # sort first and second halves
         merge_sort(arr, l, m)
         merge_sort(arr, m+1, r)
         merge(arr, l, m, r)
