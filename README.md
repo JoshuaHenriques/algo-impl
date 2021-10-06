@@ -2,4 +2,4 @@
   <h3 align="center">Algorithm Implementations</h3>
 
 <p align="center">
-    Implementations in Python
+    In Python
