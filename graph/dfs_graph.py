@@ -63,4 +63,9 @@ if __name__ == "__main__":
     # cover all unconnected components of a graph
     for i in range(N):
         if not discovered[i]:
-            dfs_iterative(graph, i, discovered)
+            dfs_recursion(graph, i, discovered)
+            
+    discovered1 = [False] * N
+    for i in range(N):
+        if not discovered1[i]:
+            dfs_iterative(graph, i, discovered1)

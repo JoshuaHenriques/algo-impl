@@ -46,7 +46,7 @@ def bfs_recursion(graph, queue, discovered):
 			discovered[u] = True
 			queue.append(u)
 
-	bfs(graph, queue, discovered)
+	bfs_recursion(graph, queue, discovered)
 
 if __name__ == '__main__':
 	# list of graph edges as per the above diagram
@@ -70,4 +70,12 @@ if __name__ == '__main__':
     for i in range(N):
         if not discovered[i]:
             # start BFS traversal from vertex i
-            bfs(graph, i, discovered)
+            bfs_iterative(graph, i, discovered)
+            
+    que = deque()
+    discovered1 = [False] * N
+    for i in range(N):
+        if not discovered1[i]:
+            discovered1[i] = True
+            que.append(i)
+            bfs_recursion(graph, que, discovered1)
