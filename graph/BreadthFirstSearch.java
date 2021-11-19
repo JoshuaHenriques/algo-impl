@@ -1,5 +1,3 @@
-package graph;
-
 import java.util.*;
 
 public class BreadthFirstSearch {
@@ -11,12 +9,10 @@ public class BreadthFirstSearch {
 
 		while (!queue.isEmpty()) {
 			T v = queue.poll();
-			if (!visited.contains(v)) {
-				if (v.equals(vertex1)) {
-					return true;
-				}
-				visited.add(v);
+			if (v.equals(vertex1)) {
+				return true;
 			}
+			visited.add(v);
 
 			List<T> adj = graph.getAdjMap().get(v);
 			for (int i = 0; i < adj.size(); i++) {
