@@ -11,8 +11,8 @@ def binary_search_recursion(array, target, left, right):
 	else: 
 		return binary_search_recursion(array, target, mid + 1, right)
 
-def binary_search_iterative(array, target, left, right):
-	# (left, right) = (0, len(array) - 1)
+def binary_search_iterative(array, target):
+	(left, right) = (0, len(array) - 1)
 	
 	#  loop till the search space is exhausted
 	while left <= right:
